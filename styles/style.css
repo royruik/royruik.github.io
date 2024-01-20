@@ -50,7 +50,7 @@ h4{ /* What do you think... */
   margin: 0;
   padding: 10px 0;
   color: #da291c;
-  text-shadow: 3px 3px 1px #ffc40c;
+  text-shadow: 3px 3px 1px #fffdd0;
 }
 
 img {
@@ -66,6 +66,12 @@ p {
 table {
   border: 1px solid black;
   background-color: #f1f1c1;
+}
+
+textarea {
+  width: 100%; /* This will make it as wide as its container */
+  height: 150px; /* This sets a fixed height */
+  align: center;
 }
 
 /* Defining styling for a specific element type - each question */
