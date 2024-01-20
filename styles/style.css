@@ -25,7 +25,7 @@ h1 {
 
 h2{
   font-family: 'Georgia', 'Trebuchet MS', serif;
-  font-size: 40px;
+  font-size: 28px;
   text-align: center;
   margin: 0;
   padding: 10px 0;
@@ -33,7 +33,7 @@ h2{
   text-shadow: 3px 3px 1px #da291c;
 }
 
-h3{
+h3{ /* not used */
   font-family: 'Georgia', 'Trebuchet MS', sans-serif;
   font-size: 20px;
   text-align: left;
@@ -60,8 +60,7 @@ img {
 }
 
 p {
-  color: #ffc40c;
-  font-size: 18px;
+  color: #da291c;
 }
 
 table {
