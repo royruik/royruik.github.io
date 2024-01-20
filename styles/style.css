@@ -50,7 +50,7 @@ h4{ /* What do you think... */
   margin: 0;
   padding: 10px 0;
   color: #da291c;
-  text-shadow: 3px 3px 1px #fffdd0;
+  text-shadow: 3px 3px 1px #ffffff;
 }
 
 img {
@@ -99,5 +99,5 @@ textarea {
   text-align: right;
   color: #f5f5f5;
   font-style: italic;
-  font-size: 75%;
+  font-size: 40%;
 }
