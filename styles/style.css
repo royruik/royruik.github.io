@@ -8,12 +8,12 @@ body {
   width: 900px;
   border: 2px solid black;
   padding: 0px 20px 20px 20px;
-  font-family: 'Futura', 'Trebuchet MS', sans-serif;
+  font-family: 'Georgia', 'Trebuchet MS', serif;
   
 }
 
 h1 {
-  font-family: 'Futura', 'Trebuchet MS', sans-serif;
+  font-family: 'Georgia', 'Trebuchet MS', serif;
   font-size: 60px;
   text-align: center;
   margin: 0;
@@ -24,7 +24,7 @@ h1 {
 }
 
 h2{
-  font-family: 'Futura', 'Trebuchet MS', sans-serif;
+  font-family: 'Georgia', 'Trebuchet MS', serif;
   font-size: 40px;
   text-align: center;
   margin: 0;
@@ -34,13 +34,23 @@ h2{
 }
 
 h3{
-  font-family: 'Futura', 'Trebuchet MS', sans-serif;
+  font-family: 'Georgia', 'Trebuchet MS', sans-serif;
   font-size: 20px;
   text-align: left;
   margin: 0;
   padding: 10px 0;
   color: #ffc40c;
   text-shadow: 3px 3px 1px #da291c;
+}
+
+h4{ /* What do you think... */
+  font-family: 'Georgia', 'Trebuchet MS', serif;
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  color: #da291c;
+  text-shadow: 3px 3px 1px #ffc40c;
 }
 
 img {
@@ -50,7 +60,8 @@ img {
 }
 
 p {
-  color: red;
+  color: #ffc40c;
+  font-size: 18px;
 }
 
 table {
