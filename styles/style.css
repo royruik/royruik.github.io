@@ -46,7 +46,7 @@ table {
 
 /* Defining styling for a specific element type - each question */
 .question {
-  background-color: black;
+  background-color: #faf0be;
   color: white;
   margin: 20px;
   padding: 20px;
@@ -57,7 +57,7 @@ table {
   display: block;
   width: 100%;
   border: none;
-  background-color: #ffff66;  /* yellow */
+  background-color: #faf0be;  
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
@@ -67,7 +67,7 @@ table {
 /* Defining styling for a specific element with an id */
 #signature {
   text-align: right;
-  color: red;
+  color: #f5f5f5;
   font-style: italic;
   font-size: 75%;
 }
