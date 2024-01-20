@@ -1,8 +1,4 @@
 
-/* Style sheet
-   color picker www.w3schools.com/colors/colors_picker.asp
-*/
-
 html {
   background-color: white;
 }
@@ -20,7 +16,16 @@ h1 {
   text-align: center;
   margin: 0;
   padding: 20px 0;
-  color: #ffffe0;  /* Fuchsia */
+  color: #fffdd0;  
+  text-shadow: 3px 3px 1px #da291c;
+}
+
+h2{
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  color: #ffc40c;
   text-shadow: 3px 3px 1px #da291c;
 }
 
