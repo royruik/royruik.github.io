@@ -1,0 +1,63 @@
+
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+/* Bootstrap default font-family is Helvetica Neue */
+.background-image{
+  background-size: cover;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: 1;
+}
+
+.navbar {
+  z-index: 9999;
+}
+
+h6{
+  font-family: "Constantia", Times, serif;
+  text-align: left;
+  font-weight: bold;
+  font-size: 40px;
+
+}
+
+h1{
+  font-family: "Arial", Times, serif;
+
+}
+p{
+  font-family: "Constantia", Times, serif;
+  text-align: left;
+
+}
+h2{
+  font-family: "Constantia", Times, serif;
+  text-align: center;
+}
+h3{
+  font-family: "Constantia", Times, serif;
+  text-align: left;
+  font-weight: bold;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px #000000;
+}
+button {
+  background-color: black;
+  color: white;
+}
+
+.btn-custom {
+  background-color: #5a6268; /* Change to your preferred color */
+  color: #ffffff; /* Change to your preferred color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding around the text */
+  font-size: 18px; /* Larger font size */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn-custom:hover {
+  background-color: #6c757d; /* Slightly lighter color on hover */
+}

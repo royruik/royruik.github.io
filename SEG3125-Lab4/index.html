@@ -1,0 +1,340 @@
+<!-- Start with: https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module4-Service-->
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>uOttawa Bicycle Repair Shop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+
+
+<header class="navbar navbar-light" style="position: fixed; width: 100%; height: 80px;">
+    <nav class="navbar navbar-light" style="background-color: white; width: 100%;">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="images/logo.png" height="80px" alt="">
+          <h6 class="mb-0 ml-3">uOttawa Bicycle Repair Shop</h6>
+        </a>
+    </nav>
+</header>
+
+<body>
+
+    <div class="image1" 
+     style="background-image: url('images/intro.jpg');
+            height: 100vh; 
+            box-sizing: border-box;
+            background-repeat: no-repeat;
+            background-size: cover">
+    </div>
+    
+    <div class="row" style="background-color: white;" >
+        <div class="col-lg-12">
+
+
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="container-md p-3 my-3 border text-white" style="background-color: black;">
+        <h1><p>Welcome to the uOttawa Bicycle Repair Shop</p></h1>
+
+    </div>
+
+
+
+
+    
+    <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
+    <!-- These can be useful for making sure someone reads something before continuing -->
+    <!-- <div class="container" style="background-color: #d8c2b2; padding:30px;">
+        <h2>Alert</h2>
+        <p>We have something important to say</p>
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Please read! </strong>You must read.
+        </div>
+    </div> -->
+
+    <!-- You'll certainly need buttons at some point in your site -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp -->
+    <!-- Remember how we talked about choosing a hue and changing the saturation for active/inactive -->
+    <!-- This idea is already part of the components in Bootstrap -->
+
+
+
+    <!-- <div class="container" style="background-color: #d8d6d8; padding:30px;">
+        <h2>Button States</h2>
+        <button type="button" class="btn btn-warning">Primary Button</button>
+        <button type="button" class="btn btn-warning active">Active Primary</button>
+        <button type="button" class="btn btn-warning" disabled>Disabled Primary</button>
+    </div> -->
+
+
+
+    <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
+    <!-- Modals are useful for additional information or questions -->
+    <!-- Here the modal is used for a little survey -->
+
+
+    <div class="container" style="background-color: #a3a6af; padding:30px;">
+        
+        <!-- Button trigger modal -->
+        <button type="button" class="button trans btn-dark btn-lg btn-block"  data-toggle="modal" data-target="#exampleModal">
+            <h2 style="color: white; font-weight: 250">Make A Reservation</h2>
+        </button>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h2 class="modal-title" id="exampleModalLabel">Make a Reservation</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                
+
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput0">Name</label>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="First name">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Last name">
+                                </div>
+                                </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Phone Number</label>
+                            <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="(613) 564-0459">
+                          </div>
+
+                        <div class="form-group">
+                          <label for="exampleFormControlInput2">Email Address</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="bike@guys.com">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleFormControlSelect1">Select one of our services</label>
+                          <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Bike Repair - $100 </option>
+                            <option>Suspension Service - $50 </option>
+                            <option>Ski Waxing - $25 </option>
+                            <option>Skate Sharpening - $15 </option>
+                          </select>
+                        </div>
+
+                        <div class="form-group"> 
+                            <label for="exampleFormDate">Enter a Date</label>
+                            <input type="date" name="date" min="2023-01-01" >
+                        </div>
+
+                        <div class="form-group">
+                          <label for="exampleFormControlTextarea1">Comments or Special Requirements</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+
+                      </form>
+                      
+
+                </div>
+                <div class="modal-footer">
+
+                
+                    <button type="button" class="btn text-white" data-dismiss="modal" style="background-color: #48dca6;" onclick="showMessage()">Submit</button>
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: #000000;" >Close</button>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+
+<div class="row" style="background-color: white">
+<div class="col-lg-12">
+
+    <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+    <!-- Card columns allows multiple cards next to each other -->
+    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
+    <!-- My second card limits the information seen and uses collapsible to show more -->
+
+    <div class="container p-3" style="background-color: #a97856; padding:30px; color: white;">
+        <h2>Staffs</h2>
+        <h2 href="#mechanics" class="btn btn-block" data-toggle="collapse" style="background-color: #d8c2b2; color: black;">Meet Our Mechanics</h2>
+        <div id="mechanics" class="collapse">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-warning" style="width:100%;">
+                        <img class="card-img-top" src="images/kelly.png" alt="Card image" style="width:100%;">
+                        <div class="card-body">
+                            <h4 class="card-title">Kelly</h4>
+                            <p class="card-text">(Receptionist) Manages appointment schedules, organizes inventory, conducts bicycle pre-checks, and coordinates cycling gatherings.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="card bg-warning" style="width:100%;">
+                        <img class="card-img-top" src="images/joshua.png" alt="Card image" style="width:100%;">
+                        <div class="card-body">
+                            <h4 class="card-title">Joshua</h4>
+                            <p class="card-text">(Mechanic) Matches individuals with appropriate bike sizes and safety equipment, implements procedures to uphold exceptional customer service and equipment maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="card bg-warning" style="width:100%;">
+                        <img class="card-img-top" src="images/richard.png" alt="Card image" style="width:100%;">
+                        <div class="card-body">
+                            <h4 class="card-title">Richard</h4>
+                            <p class="card-text">(Mechanic) Handles maintenance of fleet bicycles and instructs participants in bike repair and maintenance techniques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <!-- Collapsible with multiple items - accordion -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+    <!-- could work well.  You can use other patterns too.  This is just an example. -->
+    <div class="container" style="background-color: #d8d6d8; padding:30px;">
+        
+        <div id="accordion">
+            <div class="card" style="background-color: #a3a6af;">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseService" style="color: white; font-size: 30px; font-weight: 800;">
+                        Our Services</a>
+                </div>
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <!-- <p style="color: white; font-size: 20px;">Here is our list of services</p> -->
+                        <div class="container-fluid" style="background-color: #a3a6af; color: black">
+                     
+                            <table id="listServices" class="listServices columns" style="background-color: transparent; color: white">
+
+                                <tbody>
+                                <tr>
+                                    <td><h3>Suspension Service</h3>  <h4>$50</h4></td>
+                                    <td><p>Ride feeling rough? Get your suspension serviced at UOttawa Bicycle Repair Shop today!</p></td>
+                                    <td><p>Specialist: Kelly</p></td>
+                                    <td>  <img src="images/suspension.png" alt="repair pic"style="width: 100%;">   </td>
+
+                                   
+                                </tr>
+                                <tr>
+                                    <td><h3>Bike Repair </h3><h4>$100</h4></td>
+                                    <td><p>Our experts pride ourselves on our ability to repair your bike, regardless of the problem. 
+                                        <br> With same-day service, we are able to get you back on the road as quick as possible! </p></td>
+                                    <td><p>Specialist: Joshua</p></td>
+                                    <td> <img src="images/repair.png" alt="repair pic"style="width: 100%;"> </td>
+
+
+                                    
+                                <tr>
+                                    
+                                </tr>
+                                <tr>
+                                    <td><h3>Ski Waxing</h3> <h4>$25</h4></td>
+                                    <td><p>With our versatile team, we do more than just bikes! <br>Get your skis waxed before you hit the slopes this winter!</p>  </td>
+                                    <td><p>Specialist: Rebecca</p></td>
+                                    <td>  <img src="images/wax.png" alt="repair pic" style="width: 100%;">  </td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Skate Sharpening</h3><h4>$15</h4></td>
+                                    <td><p>Every winter we offer our specialty 15 minute skate sharpening services for only $15!</p></td>
+                                    <td><p>Specialist: Richard</p></td>
+                                    <td>  <img src="images/skate.png" alt="repair pic" style="width: 100%;">   </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                </div>
+
+
+
+            </div> 
+                
+                <div class="container" style="background-color: #d8d6d8; padding:30px;"> 
+                    <div class="container-fluid" style="padding-left: 14%; background-color: white">
+                        <br>
+                        <br>
+                        <br>
+                        <div class="row m-6"  style="background-color: white; color: black">
+                            <div class="col-lg-6">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13419.39718946877!2d-75.70571793937202!3d45.41367244956483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce05b8f173bb61%3A0x785122f32ce21d6d!2sJoe%20Mamma%20Cycles!5e0!3m2!1sen!2sca!4v1675740127534!5m2!1sen!2sca"
+                                 width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="col-lg-6">
+                                <h2>Our Operating Hours</h2>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <p>Monday 9:00 a.m. - 5:00 p.m. <br>
+                                        Tuesday 9:00 a.m. - 5:00 p.m. <br>
+                                        Wednesday 9:00 a.m. - 5:00 p.m. <br>
+                                        Thursday 9:00 a.m. - 5:00 p.m. <br>
+                                        Friday 9:00 a.m. - 5:00 p.m. <br>
+                                        Saturday 11:00 a.m. - 2:00 p.m. <br>
+                                        Sunday Closed</p>
+                                    </div>
+                                    <div class="col-lg-4 text-lg-right">
+                                        <p>uOttawa Bicycle Repair Shop <br>
+                                        767 Bank Street <br>
+                                        Ottawa, Ontario <br>
+                                        K1S 3V3 <br>
+                                        (613) 564-0459</p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                       
+        </body>
+        <script>
+            function showMessage() {
+                alert('Your message has been submitted!');
+            }
+            </script>
+                
+</html>

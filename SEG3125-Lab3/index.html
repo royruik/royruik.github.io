@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <title>uOttawa Groceries Market</title> 
+</head>
+
+<body onload="onLoadFunction();"></body>
+  <header>
+    <div class="logo-container" style="display: flex; align-items: center;">
+      <a>
+        <img src="images/uOttawa-logo.png" alt="uOttawa_logo" width="240" height="64">
+      </a>
+      <h1 class="logo"><i class="ri-ship-2-fill"></i><span>Groceries Market</span></h1>
+    </div>
+
+   <header>
+    <nav class="navbar">
+      <a href="#"class = "nav-branding"></a>
+      <ul class ="nav-menu">
+        <li class="nav-item">
+          <a href="#" class="nav-link" onclick="openInfo(event, 'Preference')">Preference</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" onclick="openInfo(event, 'Products'); populateListProductChoices('dietSelect', 'preferenceSelect', 'displayProduct');">
+            Product</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" onclick="openInfo(event, 'Cart'); viewCart()">Cart</a>
+        </li>
+
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+
+      </div>
+
+
+    </nav>
+   </header>
+   
+		<!-- Tab links, each one with an onclick event associated with it -->
+		<!-- <div class="tab">
+			<button class="tablinks" onclick="openInfo(event, 'Preference')">Preference</button>
+			<button class="tablinks" onclick="openInfo(event, 'Products'); populateListProductChoices('dietSelect', 'preferenceSelect', 'displayProduct');">Products</button>
+			<button class="tablinks" onclick="openInfo(event, 'Cart'); viewCart()">Cart</button>
+		</div> -->
+
+  </header>
+
+   
+<!-- Tab content -->
+<div id="Preference" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about you.</p>
+	Choose a Category:
+	<select id="dietSelect" name="dietSelect">
+	  <option value="None">All</option>
+	  <option value="Vegetarian">Vegetarian</option>
+    <option value="GlutenFree">GlutenFree</option>
+    
+	</select>
+  <br></br>
+  Choose your preference:
+  <select id="preferenceSelect" name="preferenceSelect">
+    <option value="None">None</option>
+    <option value="Organic">Organic</option>
+    <option value="Inorganic">Non-organic</option>
+  </select>
+  <br></br>
+  Price Range: 
+  <!--Price Range Code start from tutorial: https://www.geeksforgeeks.org/price-range-slider-with-min-max-input-using-html-css-and-javascript/-->
+  <div class="price-input-container"> 
+    <div class="price-input"> 
+        <div class="price-field"> 
+            <span>Minimum Price</span> 
+            <input type="number" 
+                   class="min-input" 
+                   value="0"> 
+        </div> 
+        <div class="price-field"> 
+            <span>Maximum Price</span> 
+            <input type="number" 
+                   class="max-input" 
+                   value="100"> 
+        </div> 
+    </div> 
+    <div class="slider-container"> 
+        <div class="price-slider"> 
+        </div> 
+    </div> 
+</div> 
+
+<!-- Slider -->
+<div class="range-input"> 
+    <input type="range" 
+           class="min-range" 
+           min="0" 
+           max="1000" 
+           value="0" 
+           step="1"> 
+    <input type="range" 
+           class="max-range" 
+           min="0" 
+           max="1000" 
+           value="850" 
+           step="1"> 
+</div> 
+
+  <br></br>
+  <!-- After click the button leads user to get into Products tab -->
+  <button id="filter" type="button" class="block" onclick="populateListProductChoices('dietSelect','preferenceSelect', 'displayProduct', 'All'); openInfo(event, 'Products')">
+    Filter Your Results
+  </button>
+</div>
+
+<div id="Products" class="tabcontent">
+  
+  <div id="Categories" class="sidenav">
+      <button onclick="populateListProductChoices('dietSelect','preferenceSelect', 'displayProduct', 'All'); openInfo(event, 'Products')">All</button>
+      <button onclick="populateListProductChoices('dietSelect','preferenceSelect', 'displayProduct', 'Bakery'); openInfo(event, 'Products')">Bakery</button>
+      <button onclick="populateListProductChoices('dietSelect','preferenceSelect', 'displayProduct', 'Beverage'); openInfo(event, 'Products')">Beverage</button>
+      <button onclick="populateListProductChoices('dietSelect','preferenceSelect', 'displayProduct', 'Diary'); openInfo(event, 'Products')">Diary</button>
+      <button onclick="populateListProductChoices('dietSelect','preferenceSelect', 'displayProduct', 'Fish'); openInfo(event, 'Products')">Fish</button>
+      <button onclick="populateListProductChoices('dietSelect','preferenceSelect', 'displayProduct', 'Fruit'); openInfo(event, 'Products')">Fruit</button>
+      <button onclick="populateListProductChoices('dietSelect','preferenceSelect', 'displayProduct', 'Vegetable'); openInfo(event, 'Products')">Vegetable</button>
+      <button onclick="populateListProductChoices('dietSelect','preferenceSelect', 'displayProduct', 'Meat'); openInfo(event, 'Products')">Meat</button>
+      
+  </div>
+  
+  <div id="productsList">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+	 <p>Choose items to buy:</p>
+   <br></br>
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="addToCart()">
+		Add Selected Items to Cart
+	</button>
+  <button id="addCart" type="button" class="block" onclick="viewCart(); openInfo(event, 'Cart')">
+		View Cart
+	</button>
+  </div>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <div id="displayCart"></div>
+  <div class="button-container">
+    <button id="clearCartButton" type="button" class="block" onclick="clearCart();">
+      Clear Cart
+    </button>
+    <button id="proceedtoPaymentButton" type="button" class="block" onclick="alert('Proceeding to payment...You know this is a joke...');">
+      Proceed to Payment
+    </button>
+  </div>
+</div>
+<br>
+
+<footer id="signature">Site created by Joey Lee, Hairuo Liu and Roy Rui.</p>	
+  </footer>
+
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+
+
+</body>
+</html>
